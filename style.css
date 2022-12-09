@@ -1,0 +1,353 @@
+/* Fonts
+* --------------------------------------- */
+
+.content a {
+  font-size: 17px;
+  color: mediumblue;
+}
+
+@font-face {
+  font-family: "Canela Bold";
+  src: url('./fonts/CanelaWeb-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Canela";
+  src: url('./fonts/CanelaWeb-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Atlas Grotesk Medium";
+  src: url('./fonts/AtlasGroteskWeb-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Atlas Grotesk Regular";
+  src: url('./fonts/AtlasGroteskWeb-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Atlas Grotesk Light";
+  src: url('./fonts/AtlasGroteskWeb-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+/* Style for fullpage
+* --------------------------------------- */
+#fp-nav ul li a span {
+	background:#1a1a1a;
+}
+#fp-nav ul li .fp-tooltip {
+	color: #1a1a1a;
+}
+
+
+/* Style for section headers
+* --------------------------------------- */
+
+.content h3 {
+  font-size: 50px;
+  color: black;
+}
+
+.header h1 {
+  font-size: 2.5em;
+  color: black;
+}
+
+.content h4 {
+  font-size: 25px;
+  color: black;
+}
+
+.content h5 {
+  font-size: 35px;
+  color: black;
+}
+
+.content h2 {
+	font-size: 3.0em;
+	font-family: 'Canela', sans-serif;
+	text-transform: uppercase;
+  text-align: center;
+  color: black;
+}
+
+.header h2 {
+  font-size: 0.8em;
+  color: black;
+}
+
+.header2 h1 {
+	font-size: 5em;
+	font-family: 'Canela', sans-serif;
+	font-weight:100;
+	margin:0;
+  text-align: center;
+  color: black;
+  text-align: center;
+  font-weight: bold;
+  font-size: 80px;
+}
+
+
+#main-title {
+	font-size: 2em;
+  color: black;
+}
+.header {
+	text-align: center;
+	padding-left: 0px;
+  color: black;
+}
+.header p {
+	font-size: 2em;
+	font-weight: 100;
+  color: black;
+}
+#main-title p {
+	font-size: 1em;
+  color: black;
+}
+
+/* Style for section content
+* --------------------------------------- */
+.content h1 {
+	font-size: 300%;
+/*   color: white; */
+	font-weight:100;
+  text-align: center;
+  color: black;
+}
+.content {
+	text-align:center;
+	padding-left: 100px;
+	padding-right: 100px;
+	font-weight: 400;
+  color: black;
+}
+
+.content p {
+	font-size: 120%;
+  margin-left: 200px;
+  margin-right: 200px;
+  color: black;
+}
+
+.color_phrase {
+  color: FireBrick;
+  font-size: 100px;
+}
+
+.color_phrase2 {
+  color: FireBrick;
+  font-size: 50px;
+}
+
+.flexbox1 {
+  display: flex;
+  margin-left: 10%;
+  font-weight: bold;
+  color: black;
+}
+
+.flexbox2 {
+  display: flex;
+  margin-left: 4%;
+  font-weight: bold;
+  color: black;
+}
+
+
+ul {
+    list-style-type:none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+li span {
+    display: inline-block;
+    width: 550px;
+    margin-left: 140px;
+}
+
+
+
+
+.yearselector {
+  width: 200px;
+  height: 100px;
+  overflow-y: auto;
+  color: black;
+  display: block;
+  text-decoration: none;
+  margin-left: 1em;
+}
+
+#tooltip {
+  position: absolute;
+  width: 250px;
+  height: auto;
+  padding: 10px;
+  color: white;
+  background-color: black;
+  opacity: 0.8;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+}
+
+#tooltip.hidden {
+  display: none;
+}
+
+button{
+  margin-right: 0.4em; 
+  width: 5em;
+  background-color: white;
+  text: "play";
+}
+
+#myInput {
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 100%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
+}
+
+#myUL {
+  /* Remove default list styling */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd; /* Add a border to all links */
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6; /* Grey background color */
+  padding: 12px; /* Add some padding */
+  text-decoration: none; /* Remove default text underline */
+  font-size: 18px; /* Increase the font-size */
+  color: black; /* Add a black text color */
+  display: block; /* Make it into a block element to fill the whole list */
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee; /* Add a hover effect to all links, except for headers */
+}
+
+/* Start range slider style */
+
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  margin: 5.8px 0;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0.6px #000000, 0px 0px 0px #0d0d0d;
+  background: #e8eaed;
+  border-radius: 1.3px;
+  border: 0.2px solid #e8eaed;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  border: 1.4px solid #808080;
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+  background: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -6px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #e8eaed;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0.6px #000000, 0px 0px 0px #0d0d0d;
+  background: #e8eaed;
+  border-radius: 1.3px;
+  border: 0.2px solid #e8eaed;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  border: 1.4px solid #808080;
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+  background: #ffffff;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #e8eaed;
+  border: 0.2px solid #e8eaed;
+  border-radius: 2.6px;
+  box-shadow: 0px 0px 0.6px #000000, 0px 0px 0px #0d0d0d;
+}
+input[type=range]::-ms-fill-upper {
+  background: #e8eaed;
+  border: 0.2px solid #e8eaed;
+  border-radius: 2.6px;
+  box-shadow: 0px 0px 0.6px #000000, 0px 0px 0px #0d0d0d;
+}
+input[type=range]::-ms-thumb {
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  border: 1.4px solid #808080;
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+  background: #ffffff;
+  cursor: pointer;
+  height: 8.4px;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #e8eaed;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #e8eaed;
+}
+
+/* hover */
+
+#hover {
+  text-align: left;
+  padding: 0px 15px 0 15px;
+  height: 100px;
+  border-color: lightgray;
+  border-left: 6px solid #ccc!important;
+  background-color: #e8eaed;
+  margin-bottom: 10px;
+}

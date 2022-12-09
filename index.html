@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>No More Wars!</title>
+
+    <!-- ************ FULL PAGE ************** -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+      }
+    </style>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.15/fullpage.min.css"
+      integrity="sha512-FKlWnaJrtBEqH+gNy8kvp+/61S+8iOKb5tG+EKCQ3Fc3iUYr9MvnywpkZBcuNKrxQxlnZYpNwDgkZ2atX7wVVg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script type="text/javascript">
+      var headerColor = "#ddd",
+        contentColor = "#fff";
+
+      $(document).ready(function () {
+        $("#fullpage").fullpage({
+          sectionsColor: [
+            headerColor,
+            contentColor,
+            contentColor,
+            headerColor,
+            contentColor,
+            contentColor,
+            contentColor,
+            headerColor,
+            contentColor,
+            headerColor,
+            contentColor,
+          ],
+          navigation: true,
+          navigationPosition: "right"
+        });
+      });
+    </script>
+
+    <!-- ************ EXPLORATION ************** -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="explore-map/terrorism.css" />
+
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3js.org/topojson.v2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.24.0/d3-legend.js"></script>
+    <script src="https://unpkg.com/topojson@3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.22.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.2.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.21.0"></script>
+    <script defer src="worldmap.js"></script>
+    <script defer src="main.js" type="module"></script>
+
+    <style>
+      #flexbox {
+        display: flex;
+        flex-direction: row;
+      }
+
+      #column1-left {
+        width: 50%;
+        margin-left: 100px;
+      }
+
+      #column1-right {
+        margin-left: 100px;
+        width: 200px;
+      }
+
+      #hover {
+        height: 200px;
+        padding-top: 80px;
+        margin-top: 100px;
+      }
+
+      #hover-contents {
+        vertical-align: top;
+        margin-top: 0;
+        font-size: 15px;
+      }
+
+      img:hover {
+        animation: shake 0.5s;
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes shake {
+        0% {
+          transform: translate(1px, 1px) rotate(0deg);
+        }
+        10% {
+          transform: translate(-1px, -2px) rotate(-1deg);
+        }
+        20% {
+          transform: translate(-3px, 0px) rotate(1deg);
+        }
+        30% {
+          transform: translate(3px, 2px) rotate(0deg);
+        }
+        40% {
+          transform: translate(1px, -1px) rotate(1deg);
+        }
+        50% {
+          transform: translate(-1px, 2px) rotate(-1deg);
+        }
+        60% {
+          transform: translate(-3px, 1px) rotate(0deg);
+        }
+        70% {
+          transform: translate(3px, 1px) rotate(-1deg);
+        }
+        80% {
+          transform: translate(-1px, -1px) rotate(1deg);
+        }
+        90% {
+          transform: translate(1px, 2px) rotate(0deg);
+        }
+        100% {
+          transform: translate(1px, -2px) rotate(-1deg);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="fullpage">
+      <div class="section" id="section0">
+        <div class="header" id="main-title">
+          <h1>
+            How Close Are We to
+            <span class="color_phrase">Nuclear Warfare?</span>
+          </h1>
+          <!--           <p style="font-size: 55%">Hover over the image!</p> -->
+          <img
+            src="https://cdn.glitch.global/7bdd78a7-94e6-4e33-aef2-af5fe07ab107/2.png?v=1668927311534"
+            alt="Example"
+            style="width: 180px; height: 100px"
+          />
+          <h2>Created by Yeon Jae Cho, Brian Wang, Angela Tao</h2>
+        </div>
+      </div>
+
+      <div class="section" id="section1">
+        <div class="content">
+          <h2>
+            The <span class="color_phrase2">Most Dangerous</span> Weapon Ever
+            Invented:
+          </h2>
+          <h4>
+            Why Reducing the Risk of Nuclear War Should Be a Serious Concern
+          </h4>
+          <p>
+            Nuclear weapons are the most dangerous weapons on earth. No weapon
+            is more destructive and there is no way to know and control how far
+            radioactive fallout will disseminate or how temporary these effects
+            will be.
+          </p>
+
+          <br />
+          <p>
+            <strong>Destruction and Death: </strong> Nuclear weapons can destroy
+            a whole city, kill millions of people, and jeopardize the natural
+            environment and future generations through its long-term
+            catastrophic effects.
+          </p>
+
+          <p>
+            <strong>Nuclear fallout: </strong> Tens of thousands would suffer
+            terrible injuries and slowly die from radiation exposure. Residual
+            radioactive material propelled into the upper atmosphere and
+            expanded over major areas of the world from where it fell down. The
+            amount and spread of fallout correlates to the size of the weapon
+            and the altitude at which it is detonated. Fallout may get carried
+            along with the products of a pyrocumulus cloud and fall as black
+            rain within the hour.
+          </p>
+
+          <p>
+            <strong>Nuclear Winter/famine: </strong> The earth’s ecosystem and
+            reduced global temperatures can lead to food shortage all over the
+            world. Cities will burn at an intense rate and create a firestorm,
+            which fans the flames and causes extreme heat. Immense smoke and
+            soot will rise way up into the stratosphere and spread across the
+            globe, blocking sunlight. Since it is at a great height, it will
+            remain there for many years to come, making the whole sky dark and
+            handicapping our agriculture, ecosystem, and temperature.
+          </p>
+
+          <p>
+            The possibilities of global devastation and mass extinction are what
+            makes Nuclear war so alarming. A nuclear war cannot be won because
+            it can lead to self-destruction.
+          </p>
+        </div>
+      </div>
+
+      <div class="section" id="section2">
+        <div class="content">
+          <h3>Country Position on Nuclear Weapons Over Time</h3>
+          <p>
+            With that in mind, disarmament is still possible. Let’s take a
+            closer look. The map shows the countries with nuclear capabilities,
+            which includes the United states, Russia, United Kingdom, France,
+            China, India, Pakistan, Israel, and North Korea. Specifically, it
+            looks at the country’s position on nuclear weapons broken down into
+            four categories: does not consider, considers, pursues, and
+            possesses over time from 1945 to 2022. As the year progresses, the
+            amount of variety of the hue is the most around the 1980s, which
+            demonstrates more and more countries exploring and pursuing nuclear
+            weapons. However, the variety of hue diminished as we approached the
+            1990s, which illustrates steadiness and that countries did not
+            continue to explore and pursue nuclear weapons.
+          </p>
+          <div id="flexbox">
+            <div id="column1-left">
+              <div class="row">
+                <div class="mapchart"></div>
+                <div class="countryName" id="country"></div>
+              </div>
+              <div class="col-md-4" id="legend"></div>
+              <div class="row">
+                <input type="range" min="1945" max="2022" id="year-category" />
+                <label
+                  for="year-category"
+                  style="display: inline-block; width: 30px; text-align: left"
+                >
+                  Year <span id="year-value"></span>
+                </label>
+              </div>
+            </div>
+            <div id="column1-right">
+              <div class="row">
+                <!-- Hover box -->
+                <div id="hover">
+                  <div id="hover-contents"></div>
+                </div>
+              </div>
+              <div class="row"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section" id="section3">
+        <div class="content">
+          <h3>Nuclear Powers Over Time</h3>
+          <p>
+            Below is another visual representation of the data in the stacked
+            area chart (without Russia and the US). This horizontal bar chart
+            demonstrates how the total number of nuclear weapons changed over
+            the years. The UK took the lead in the early years, and when we
+            reached the 1980s, France took the lead until around 2018-2019. From
+            then on, China took the lead.
+          </p>
+          <div id="observablehq-viewof-keyframe-d99883ba"></div>
+          <div id="observablehq-chart-d99883ba"></div>
+
+          <link rel="stylesheet" href="observable.css" />
+          <script type="module">
+            import {
+              Runtime,
+              Inspector,
+            } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+            import define from "https://api.observablehq.com/d/06a04453ba45210c.js?v=3";
+            new Runtime().module(define, (name) => {
+              if (name === "viewof keyframe")
+                return new Inspector(
+                  document.querySelector(
+                    "#observablehq-viewof-keyframe-d99883ba"
+                  )
+                );
+              if (name === "chart")
+                return new Inspector(
+                  document.querySelector("#observablehq-chart-d99883ba")
+                );
+              return ["update"].includes(name);
+            });
+          </script>
+        </div>
+      </div>
+
+      <div class="section" id="section4">
+        <div class="content">
+          <h1>Our Approach to Analyzing and Visualizing the Datasets</h1>
+
+          <p>
+            When choosing a dataset to analyze, we wanted to pick something that
+            is beneficial for society or provide insights about perplexing
+            trends that are hard to see with the naked eye. After looking at
+            multiple datasets, we agreed on the topic of Nuclear Weapons because
+            Nuclear weapons are the most dangerous weapons and the consequences
+            of a nuclear war are detrimental to humanity and Earth.
+          </p>
+          <p>
+            Our purpose is to simplify the dataset by focusing on certain
+            factors to identify patterns that may help describe, explain, and
+            predict. Through this project, we want to inform everyone about
+            potential efforts to reduce the risks of a nuclear war. We will be
+            taking a look at how the number of nuclear warheads change over time
+            and concrete measures taken by each country in helping to reduce the
+            risk of a nuclear war from breaking out.
+          </p>
+          <p>
+            Before making any visualizations with the data, we cleaned up the
+            datasets by taking into account any missing values or unnecessary
+            data. We removed certain columns that had much to do with our
+            questions or hypotheses.
+          </p>
+          <p>
+            We chose to use a variety of graphs, each to their advantage in the
+            type of data we want to show. We implemented a horizontal bar chart,
+            stacked bar chart, choropleth map, and stacked area chart. We chose
+            to use a horizontal bar chart because the data is categorical and to
+            show frequency distribution. Bar chart is useful to compare
+            different categorical or discrete variables. Stacked chart bar
+            charts are best used when showing comparisons between categories,
+            which is suitable for comparing countries with the number of nuclear
+            warheads split into four categories. Furthermore, choropleth maps
+            use color to show how data changes from place to place, which is
+            suitable for visualizing information tied to geography, and to
+            compare and analyze data and trends from across locations/countries.
+            Lastly, stacked-area charts can track not only the total value, but
+            also the breakdown of that total by groups. This is helpful when we
+            want to compare the heights of each segment of the curve according
+            to a particular country and allows us to get a general idea of how
+            each subgroup compares to the other in their contributions to the
+            total number of nuclear warheads.
+          </p>
+        </div>
+      </div>
+
+      <div class="section" id="section5">
+        <div class="content">
+          <h3>A Deeper Breakdown</h3>
+          <p>
+            Roughly 90 percent of all nuclear warheads are owned by Russia and
+            the United States, who each have around 4,000 warheads in their
+            military stockpiles. In contrast, the rest of the countries do not
+            see a need for more than a couple hundred nuclear weapons to ensure
+            national security.
+          </p>
+          <p>
+            To better understand the proliferation of nuclear weapons is to
+            quantify the stockpiles the countries have. An important note is
+            that the stacked area chart shown does not include retired warheads
+            awaiting dismantlement. Thus, the total inventories of nuclear
+            warheads is larger than what is shown in the chart. Since the United
+            States and Russia’s military power are so much more advanced
+            compared to that of the rest of the world, there is a huge gap
+            between the two leading military powers and the other countries. As
+            a result, it might be beneficial to look at the stockpiles of
+            nuclear weapons between Russia and the United States in one chart,
+            and compare the rest of the countries in another chart. For both
+            charts, they illustrate the total number of stockpiled nuclear
+            weapons for the respective countries peaked between 1980 and 1990.
+            Notice the difference between the scales for the y-axis, this shows
+            how much more powerful the US and Russia are. Within the stacked
+            area chart without Russia and the US, it is evident that UK, France,
+            and China have the most total number of nuclear weapons over the
+            years.
+          </p>
+          <div class="flexbox2">
+            <ul>
+              <li>
+                <span>Total Amount of Nuclear Weapons Over the Years</span>
+                <span>Total Amount of Nuclear Weapons Over the Years</span>
+              </li>
+              <li>
+                <span>(Without USA and Russia)</span>
+                <span>(Only USA and Russia)</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="flexbox1">
+            <div class="stackedAreaChart"></div>
+            <div class="stackedAreaChart2"></div>
+          </div>
+
+          <div class="flexbox1">
+            <div class="areaChart"></div>
+            <div class="areaChart2"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section" id="section6">
+        <div class="content">
+          <h5>Nuclear Inventory Breakdowns</h5>
+
+          <p>
+            Despite the United States’ effort to dramatically reduce its
+            non-strategic nuclear weapons after the Cold War, the combined
+            inventory of nuclear warheads of the whole world remains at a very
+            high level. The majority of the ownerships falls into nine
+            countries, possessing roughly 12,700 warheads as of early-2022.
+            Russia maintains a large amount and variety of non-strategic nuclear
+            warheads. People are concerned that Russia might intend on using
+            these in conflicts. The US military maintains more reserve strategic
+            warheads.
+          </p>
+
+          <p>
+            It is estimated that of the world’s 12,700 nuclear warheads, more
+            than 9,400 are in the military stockpiles for use by missiles,
+            aircraft, ships and submarines. The remaining warheads have been
+            retired but are still intact and waiting for dismantlement. Looking
+            at the stacked bar chart, Of the 12,700 total nuclear warheads, some
+            3,730 are deployed on missiles or bomber bases, which is a
+            combination of strategic and non-strategic warheads. US, Russian, UK
+            and French warheads are all on high alert, ready for use in
+            emergencies.
+          </p>
+
+          <p>
+            Russia has a clear numerical advantage in non-deployed strategic
+            warheads, while the US has a numerical advantage in non-strategic
+            nuclear warheads. To promote reduction of nuclear weapons, the
+            United States and Russia could negotiate an agreement with an
+            aggregate limit covering all their nuclear warheads and could offset
+            reductions in the categories in which the country has advantage in.
+          </p>
+          <h5>Estimated Nuclear Warhead Inventories, 2022</h5>
+          <p>
+            Strategic warheads are designed to be used in settled territory far
+            from the battlefield as part of a strategic plan. Deployed are those
+            on ballistic missiles or bomber bases. Retired are those awaiting
+            dismantlement.
+          </p>
+
+          <div id="vis"></div>
+          <script type="text/javascript">
+            var yourVlSpec = {
+              $schema: "https://vega.github.io/schema/vega-lite/v4.json",
+              width: 600,
+              height: 300,
+              data: {
+                url: "https://raw.githubusercontent.com/Angelataoab/nuclear-warhead-inventories/main/nuclear-warhead-inventories.csv",
+              },
+              transform: [
+                {
+                  fold: [
+                    "Deployed strategic warheads",
+                    "Deployed nonstrategic warheads",
+                    "Nondeployed warheads",
+                    "Retired warheads",
+                  ],
+                  as: ["key", "value"],
+                },
+              ],
+              mark: {
+                type: "bar",
+                tooltip: { content: "data" },
+                cursor: "pointer",
+              },
+              selection: {
+                industry: {
+                  type: "multi",
+                  fields: ["key"],
+                  bind: "legend",
+                  on: "click",
+                  clear: "dblclick",
+                },
+              },
+              encoding: {
+                y: {
+                  field: "Entity",
+                  type: "nominal",
+                  title: "Country",
+                  sort: "-x",
+                },
+                x: {
+                  field: "value",
+                  type: "quantitative",
+                  title: "Number of Warheads",
+                },
+                color: {
+                  field: "key",
+                  type: "nominal",
+                  scale: { scheme: "greenblue" },
+                },
+                opacity: {
+                  condition: { selection: "industry", value: 1 },
+                  value: 0.2,
+                },
+              },
+            };
+            vegaEmbed("#vis", yourVlSpec);
+          </script>
+        </div>
+      </div>
+
+      <div class="section" id="section7">
+        <div class="content">
+          <h1>Eager to Learn More about this Project?</h1>
+          <a href="https://utopian-temporal-galaxy.glitch.me/"
+            >Click here to learn more about future implementation and
+            development process</a
+          >
+        </div>
+      </div>
+
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.15/fullpage.min.js"
+        integrity="sha512-rNf09cQHIWzD8BU37lIb3rInygeWXW2hVqJ7niVtTPXWuVR3aFiph1eFIeDiEQV8J45u0qfp7ng8I3TzJHY4Eg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      ></script>
+      <script>
+        new fullpage("#fullpage", {
+          autoScrolling: true,
+          sectionsColor: [
+            contentColor,
+            contentColor,
+            headerColor,
+            contentColor,
+            contentColor,
+            contentColor,
+            headerColor,
+            contentColor,
+            headerColor,
+            contentColor,
+            headerColor,
+          ],
+        });
+      </script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+Entity,Code,Year,nuclear_weapons_depl_strat,nuclear_weapons_depl_nonstrat,nuclear_weapons_reserve_nondepl,nuclear_weapons_retired
+China,CHN,2022,0,0,350,0
+France,FRA,2022,280,0,10,0
+India,IND,2022,0,0,160,0
+Israel,ISR,2022,0,0,90,0
+North Korea,PRK,2022,0,0,20,0
+Pakistan,PAK,2022,0,0,165,0
+Russia,RUS,2022,1588,0,2889,1500
+United Kingdom,GBR,2022,120,0,60,45
+United States,USA,2022,1644,100,1964,1720
